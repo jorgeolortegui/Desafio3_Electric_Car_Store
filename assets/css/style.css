@@ -1,0 +1,215 @@
+body{
+    display: grid;
+    margin: 0;
+    grid-template-areas: 
+    "menu"
+    "filtros"
+    "principal"
+    "pie";
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-car{
+    width: 30px;
+}
+
+.amburguesa{
+    width: 35px;
+    margin-left: auto;
+}
+
+main section article img{
+    width: 100%;
+}
+
+nav section a{
+    text-decoration: none;
+    color: white;
+}
+
+nav section h1{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+section h2{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+select{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    color: #707070;
+    border-radius: 7px;
+}
+
+footer img{
+    width: 25px;
+}
+
+footer p{
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    margin: 0;
+}
+
+/*Oculté el otro menu*/
+.menu-item{
+    display: none;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(177, 177, 177);
+    align-items: center;
+    margin: 20px;
+    box-shadow: 10px 10px 10px 30px rgba(0,0,0 / 50%);
+}
+
+.card-4{
+    display: none;
+}
+
+.modelo-carro{
+    margin: 0;
+}
+
+button{
+    border: none;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: crimson;
+    border-radius: 7%;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;    
+}
+
+
+.numeracion{
+    display: flex;
+    border: 1px solid rgb(177, 177, 177);
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+section div{
+    padding: 10px 20px;
+    justify-content: center;
+    font-size: 14px;
+    color: crimson;
+    align-content: center;
+}
+
+.numero1{
+    font-weight: 600;
+}
+
+
+
+
+
+nav{
+    grid-area: menu;
+    background-color: crimson;
+    display: flex;
+    color: white;    
+    flex-direction: column;
+}
+
+.filtros{
+    grid-area: filtros;
+    background-color: #eaeaea;
+    flex-direction: column;
+    padding: 17px;
+    justify-content: center;
+}
+
+main{
+    grid-area: principal;
+    flex-direction: column;
+    justify-items: center;
+}
+
+footer{
+    grid-area: pie;
+    background-color: FireBrick;
+    justify-items: center;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+/* Medida Escritorio */
+@media(min-width: 576px){
+    body{
+        grid-template-columns: 1fr 6fr;
+        grid-template-areas:
+        "menu filtros"
+        "menu principal"
+        "pie principal";
+    }
+
+    .logo{
+        justify-content: center;
+    }
+
+    .menu-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item a {
+        padding: 5px;
+    }
+
+    .amburguesa{
+        display: none;
+    }
+
+    .card{
+        display: none;
+    }
+
+    .card2{
+        display: flex;
+        
+    }
+
+    .card-4{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(177, 177, 177);
+        align-items: center;
+        margin: 20px;
+        box-shadow: 10px 10px 10px 30px rgba(0,0,0 / 50%);
+    }
+    
+    footer{
+        text-align: center;
+        margin: 0;
+    }
+}
